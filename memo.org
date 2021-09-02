@@ -1,0 +1,34 @@
+* chapter1
+** 06
+   - set 型に対する演算
+	 - add() : 要素の追加
+	 - discard() : 要素の削除
+	 - |, &, - : それぞれ和，積，差集合
+** 08
+   - 文字コード -> 文字 : chr()
+   - 文字 -> 文字コード : ord()
+	 #+begin_src python :results output
+	   a = 'a'
+	   ord_a = ord(a)
+	   print(ord_a)
+	   print(chr(ord_a))
+#+end_src
+
+#+RESULTS:
+: 97
+: a
+
+** 09
+   - スライスを使って Index Error を回避
+	 #+begin_src python :results output
+	   a = ''
+	   print(a[1:])
+	   try:
+		   print(a[1])
+	   except IndexError:
+		   print('Index Error')
+	 #+end_src
+
+	 #+RESULTS:
+	 : 
+	 : Index Error
