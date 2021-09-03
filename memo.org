@@ -12,7 +12,7 @@
 	   ord_a = ord(a)
 	   print(ord_a)
 	   print(chr(ord_a))
-#+end_src
+	   #+end_src
 
 #+RESULTS:
 : 97
@@ -32,3 +32,51 @@
 	 #+RESULTS:
 	 : 
 	 : Index Error
+* chapter2
+** 11
+   - expand コマンド
+	 - タブを8文字のスペース置換
+	 - -t オプションでスペース何個に置換するかを指定
+	   #+begin_src sh :results output
+		 cat popular-names.txt | expand -t 1 | head -n 5
+	   #+end_src
+
+	   #+RESULTS:
+	   : Mary F 7065 1880
+	   : Anna F 2604 1880
+	   : Emma F 2003 1880
+	   : Elizabeth F 1939 1880
+	   : Minnie F 1746 1880
+
+** 12
+   - cut コマンド
+	 - タブやコンマで区切られたファイルの N 行目を出力する
+	 
+	   #+begin_src sh
+		 cut -f 1 ./popular-names.txt | head -n 5
+	   #+end_src
+
+	   #+RESULTS:
+	   | Mary      |
+	   | Anna      |
+	   | Emma      |
+	   | Elizabeth |
+	   | Minnie    |
+
+   - -d オプションなどでデリミタを指定できる
+
+** 13
+   - paste コマンド
+	 - ファイルをタブなどのデリミタで結合
+	   #+begin_src sh :results output
+		 paste col1.txt col2.txt | head -n 5
+	   #+end_src
+
+	   #+RESULTS:
+	   : Mary	F
+	   : Anna	F
+	   : Emma	F
+	   : Elizabeth	F
+	   : Minnie	F
+
+
