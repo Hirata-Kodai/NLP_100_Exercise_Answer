@@ -78,5 +78,3 @@
 	   : Emma	F
 	   : Elizabeth	F
 	   : Minnie	F
-
-
